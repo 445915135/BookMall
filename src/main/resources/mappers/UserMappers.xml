@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.2//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.onlineshopping.dao.UserMapper">
+      <select id="findUser" parameterType="user"  resultType="user">
+           select * from users where 1=1
+           <if test="uEmail!=null and uEmail!='' ">
+           	and uEmail=#{uEmail}
+           </if>
+           <if test="uPhone!=null and uPhone!='' ">
+           	and uPhone=#{uPhone}
+           </if>
+           <if test="uName!=null and uName!='' ">
+           	and uName=#{uName}
+           </if>
+           and uPwd=#{uPwd}
+      </select>
+      <!-- 增加注册信息 -->
+      <insert id="addRegisterInfo"  parameterType="user" >
+      		INSERT INTO users (uName,uPwd,uPhone,uRegTiem,uEmail)VALUES (#{uName},#{uPwd},#{uPhone},#{uRegTiem},#{uEmail})
+      </insert>
+      <!-- 分页查询商品 -->
+      <select id="commodityInformation"  parameterType="int" resultType="goods">
+      		select * from goods limit #{li},8
+	  </select>
+      <!-- 返回你有多少页 -->
+	  <select id="getGoodsNum"  resultType="int">
+		    select count(*) from goods
+	  </select>
+  </mapper>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns:beans="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:mvc="http://www.springframework.org/schema/mvc" 
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd "> 
+         <beans:bean  
+        class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">  
+        <!-- 允许JVM参数覆盖 -->  
+        <beans:property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE" />  
+   
+        <!-- 配置资源文件 -->  
+        <beans:property name="locations">  
+           <beans:list>
+                <beans:value>classpath:db.properties</beans:value>  
+            </beans:list>  
+        </beans:property>  
+    </beans:bean> 
+          <!-- 数据库驱动 -->
+     <beans:bean id="dataSource" class="com.jolbox.bonecp.BoneCPDataSource">
+         <beans:property name="driverClass" value="${jdbc.driver}" />  
+        <!-- 相应驱动的jdbcUrl -->  
+        <beans:property name="jdbcUrl" value="${jdbc.url}" />  
+        <!-- 数据库的用户名 -->  
+        <beans:property name="username" value="${jdbc.username}" />  
+        <!-- 数据库的密码 -->  
+        <beans:property name="password" value="${jdbc.password}" />  
+        <!-- 检查数据库连接池中空闲连接的间隔时间，单位是分，默认值：240，如果要取消则设置为0 -->  
+        <beans:property name="idleConnectionTestPeriod" value="60" />  
+        <!-- 连接池中未使用的链接最大存活时间，单位是分，默认值：60，如果要永远存活设置为0 -->  
+        <beans:property name="idleMaxAge" value="30" />  
+        <!-- 每个分区最大的连接数 -->  
+        <beans:property name="maxConnectionsPerPartition" value="150" />  
+        <!-- 每个分区最小的连接数 -->  
+        <beans:property name="minConnectionsPerPartition" value="5" />  
+     </beans:bean>
+      <!-- 扫描Servic -->
+      <context:component-scan base-package="com.onlineshopping"></context:component-scan>
+      
+         <!-- 配置spring和mybatis工厂 -->
+      <beans:bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!-- 定义数据源 -->  
+        <beans:property name="dataSource" ref="dataSource" />  
+        <!-- 指定mybatis全局配置文件 -->  
+        <beans:property name="configLocation" value="classpath:mybatis/SqlMapconfig.xml"/>  
+        <!-- 扫描mappers目录以及子目录下的所有xml文件 -->  
+        <beans:property name="mapperLocations" value="classpath:mappers/*.xml" />  
+     </beans:bean>
+      <!-- mapper接口扫描器 -->
+     <beans:bean  class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+         <beans:property name="basePackage" value="com.onlineshopping.dao"></beans:property>
+         <beans:property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></beans:property>
+     </beans:bean>
+        </beans:beans>
