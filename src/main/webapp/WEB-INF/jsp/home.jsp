@@ -55,7 +55,7 @@
 					   <div class="long-title"><span class="all-goods">全部分类</span></div>
 					   <div class="nav-cont">
 							<ul>
-								<li class="index"><a href="#">首页</a></li>
+								<li class="index" style="width: 100px"><a>首页</a></li>
                                
 							</ul>
 						    <div class="nav-extra">
@@ -104,30 +104,17 @@
 						
 									</dl>
 								</li>
-								<li class="select-list">
-									<dl id="select1">
-										<dt class="am-badge am-round">热销榜</dt>	
-										 <div class="dd-conent">										
-											<dd class="select-all selected"><a href="#">前10</a></dd>
-											<dd><a href="#">从你的全世界路过</a></dd>
-											<dd><a href="#">愿我的世界总有你二分之一</a></dd>
-											<dd><a href="#">谢谢你曾来过我的世界 </a></dd>
-											<dd><a href="#">阿弥陀佛么么哒 </a></dd>
-											<dd><a href="#">你的孤独 虽败犹荣 </a></dd>
-										 </div>
-						
-									</dl>
-								</li>
+								
 								
 							</ul>
 							<div class="clear"></div>
                         </div>
 							<div class="search-content">
 								<div class="sort">
-									<li class="first"><a title="综合">综合排序</a></li>
-									<li><a title="销量">销量排序</a></li>
-									<li><a title="价格">价格优先</a></li>
-									<li class="big"><a title="评价" href="#">评价为主</a></li>
+									
+									<li><a title="销量">销量前八
+									</a></li>
+									
 								</div>
 								<div class="clear"></div>
 

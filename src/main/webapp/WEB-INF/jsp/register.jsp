@@ -14,7 +14,10 @@
 			 var username=$("#username").val();
 			 var password=$("#password").val();
 			 var passwordRepeat=$("#passwordRepeat").val();
-			 if(email==""||phone==""||username==""||password==""||passwordRepeat=="")
+			 var uPpwd=$("#uPpwd").val();
+			 var uPpwdRepeat=$("#uPpwdRepeat").val();
+			 alert(uPpwdRepeat+uPpwd);
+			 if(email==""||phone==""||username==""||password==""||passwordRepeat==""||uPpwd="")
 				 alert("请输入完整的信息");
 			 else if(!emailreg.test(email)){
 				 alert("非法的电子邮件!");
@@ -28,12 +31,15 @@
 			 }
 			 else if(password!=passwordRepeat)
 				 alert("请输入相同的密码！");
+			 else if(uPpwd!=uPpwdRepeat){
+				 alert("请输入相同的支付密码！");
+			 }
 			 else{
 				 $.ajax({
 						type:"post",
 					    url:"${pageContext.request.contextPath }/addRegisterInfo",
 					    contentType:"application/json;charset-utf-8",	//设置头文件
-					    data:JSON.stringify({uName:username,uPwd:password,uPhone:phone,uEmail:email}),//把字符串变为json类型的
+					    data:JSON.stringify({uName:username,uPwd:password,uPpwd:uppwd,uPhone:phone,uEmail:email}),//把字符串变为json类型的
 					 	success:function(result){
 					 		if(result==true){
 					 				alert("恭喜您，注册成功。");
@@ -110,6 +116,14 @@ function enable()
                  <div class="user-pass">
 								    <label for="passwordRepeat"><i class="am-icon-lock" style="margin-top:13px"></i></label>
 								    <input type="password" name="" id="passwordRepeat" placeholder="确认密码">
+                 </div>	
+                 <div class="user-pass">
+								    <label for="uppwd"><i class="am-icon-lock" style="margin-top:13px"></i></label>
+								    <input type="password" name="" id="uppwd" placeholder="支付密码">
+                 </div>	
+                 <div class="user-pass">
+								    <label for="uppwdrepeat"><i class="am-icon-lock" style="margin-top:13px"></i></label>
+								    <input type="password" name="" id="uppwdrepeat" placeholder="确认支付密码">
                  </div>	
                  
                  </form>

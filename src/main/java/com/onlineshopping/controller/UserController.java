@@ -38,6 +38,7 @@ public class UserController {
 	   @ResponseBody
 	   public boolean addRegisterInfo (@RequestBody User user){
 		   boolean bool=false;
+		   System.out.println(user.uPpwd);
 		   String aa=MD.MD5(user.getuPwd());
 		   user.setuPwd(aa);
 		   try {

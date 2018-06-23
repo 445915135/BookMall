@@ -71,7 +71,7 @@
 					   <div class="long-title"><span class="all-goods">全部分类</span></div>
 					   <div class="nav-cont">
 							<ul>
-								<li class="index"><a href="#">首页</a></li>
+								<li class="index" style="width: 100px"><a href="#">首页</a></li>
                                 
 							</ul>
 						    <div class="nav-extra">
@@ -169,36 +169,21 @@
 							<!--价格-->
 							<div class="tb-detail-price">
 								<li class="price iteminfo_price">
-									<dt>促销价</dt>
+									<dt>原价</dt>
 									<dd><em>¥</em><b class="sys_item_price">56.90</b>  </dd>                                 
 								</li>
-								<li class="price iteminfo_mktprice">
-									<dt>原价</dt>
-									<dd><em>¥</em><b class="sys_item_mktprice">98.00</b></dd>									
-								</li>
-								<div class="clear"></div>
+								
+		
 							</div>
 
 							<!--地址-->
 							<dl class="iteminfo_parameter freight">
-								<dt>配送至</dt>
+								<dt>发货地</dt>
 								<div class="iteminfo_freprice">
 									<div class="am-form-content address">
-										<select data-am-selected>
-											<option value="a">浙江省</option>
-											<option value="b">湖北省</option>
-										</select>
-										<select data-am-selected>
-											<option value="a">温州市</option>
-											<option value="b">武汉市</option>
-										</select>
-										<select data-am-selected>
-											<option value="a">瑞安区</option>
-											<option value="b">洪山区</option>
-										</select>
-									</div>
+										
 									<div class="pay-logis">
-										快递<b class="sys_item_freprice">10</b>元
+										qwe
 									</div>
 								</div>
 							</dl>
@@ -210,9 +195,7 @@
 								<li class="tm-ind-item tm-ind-sumCount canClick">
 									<div class="tm-indcon"><span class="tm-label">累计销量</span><span class="tm-count">6015</span></div>
 								</li>
-								<li class="tm-ind-item tm-ind-reviewCount canClick tm-line3">
-									<div class="tm-indcon"><span class="tm-label">累计评价</span><span class="tm-count">640</span></div>
-								</li>
+								
 							</ul>
 							<div class="clear"></div>
 
@@ -347,6 +330,7 @@
 											<li title="">书籍作者:&nbsp;烘炒类</li>
 											<li title="">出版社:&nbsp;巴基斯坦</li>
 											<li title="">ISBN:&nbsp;湖北省武汉市</li>
+											<li title="">书籍描述:&nbsp;</li>
 										</ul>
 										<div class="clear"></div>
 									</div>

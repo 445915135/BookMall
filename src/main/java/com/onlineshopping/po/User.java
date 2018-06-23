@@ -10,14 +10,15 @@ public class User {
 	public String uCredit;
 	public Date uRegTiem;
 	public String uEmail;
+	public int uPpwd;
 	@Override
 	public String toString() {
 		return "Users [uID=" + uID + ", uName=" + uName + ", uPwd=" + uPwd + ", uPhone=" + uPhone
-				+ ", uCredit=" + uCredit + ", uRegTiem=" + uRegTiem + ", uEmail=" + uEmail + "]";
+				+ ", uCredit=" + uCredit + ", uRegTiem=" + uRegTiem + ",uPpwd="+uPpwd+" uEmail=" + uEmail + "]";
 	}
 	public User() {
 	}
-	public User(int uID, String uName, String uPwd, String uPhone, String uCredit, Date uRegTiem, String uEmail) {
+	public User(int uID, String uName, String uPwd, String uPhone, String uCredit, Date uRegTiem, String uEmail,int uPpwd) {
 		super();
 		this.uID = uID;
 		this.uName = uName;
@@ -26,6 +27,7 @@ public class User {
 		this.uCredit = uCredit;
 		this.uRegTiem = uRegTiem;
 		this.uEmail = uEmail;
+		this.uPpwd=uPpwd;
 	}
 
 	public int getuID() {
