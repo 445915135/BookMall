@@ -19,6 +19,7 @@ public class InformationController {
 	@RequestMapping(value="information")
 	public String information(HttpServletRequest request){
 		
+		
 		return "information";
 	}
 	

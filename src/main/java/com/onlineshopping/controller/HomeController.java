@@ -14,22 +14,22 @@ import com.onlineshopping.service.HomeService;
 import com.onlineshopping.service.UserService;
 
 @Controller
-//Ê×Ò³
+//ï¿½ï¿½Ò³
 public class HomeController {
 	@Autowired
 	HomeService homeService;
-	//ÏÔÊ¾ÉÌÆ·ĞÅÏ¢
+	//ï¿½ï¿½Ê¾ï¿½ï¿½Æ·ï¿½ï¿½Ï¢
 	   @RequestMapping(value ="commodityInformation")
 	   public String displayCommodity(HttpServletRequest request,Integer li){
-		   List<UserNum> listNum=homeService.getGoodsNum();			/*²éÑ¯ÓĞ¶àÉÙÒ³*/
-		   request.setAttribute("listNum",listNum);					/*listnumÒ»¹²ÓĞ¶àÉÙÒ³£¬ÎªÏÖÔÚÎª2Ò³£¬´«¸øjspÒ³Ãæ*/			
+		   List<UserNum> listNum=homeService.getGoodsNum();			/*ï¿½ï¿½Ñ¯ï¿½Ğ¶ï¿½ï¿½ï¿½Ò³*/
+		   request.setAttribute("listNum",listNum);					/*listnumÒ»ï¿½ï¿½ï¿½Ğ¶ï¿½ï¿½ï¿½Ò³ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½Îª2Ò³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½jspÒ³ï¿½ï¿½*/			
 		   if(li==null&&li==0){
 			   li=1;
 		   }
-		   request.setAttribute("li", li);							/*liÎª¶àÉÙÒ³Èç¹ûµÚÒ»´Î½øÈëÎª¿Õ*/
-		   List<Goods> list=homeService.commodityInformation(li);	/*·ÖÒ³²éÑ¯*/
+		   request.setAttribute("li", li);							/*liÎªï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Î½ï¿½ï¿½ï¿½Îªï¿½ï¿½*/
+		   List<Goods> list=homeService.commodityInformation(li);	/*ï¿½ï¿½Ò³ï¿½ï¿½Ñ¯*/
 		   System.out.println(list);
-		   request.setAttribute("list", list);						/*listÎªÉÌÆ·£¬´«¸øÇ°¶Ë*/
+		   request.setAttribute("list", list);						/*listÎªï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½*/
 		   return "home";   
 	   }
 }
