@@ -9,13 +9,13 @@
 
 		<title>个人资料</title>
 
-		<link href="../AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
-		<link href="../AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
+		<link href="${pageContext.request.contextPath}/public/two/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
+		<link href="${pageContext.request.contextPath}/public/two/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
 
-		<link href="../css/personal.css" rel="stylesheet" type="text/css">
-		<link href="../css/infstyle.css" rel="stylesheet" type="text/css">
-		<script src="../AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
-		<script src="../AmazeUI-2.4.2/assets/js/amazeui.js"></script>			
+		<link href="${pageContext.request.contextPath}/public/two/css/personal.css" rel="stylesheet" type="text/css">
+		<link href="${pageContext.request.contextPath}/public/two/css/infstyle.css" rel="stylesheet" type="text/css">
+		<script src="${pageContext.request.contextPath}/public/two/AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
+		<script src="${pageContext.request.contextPath}/public/two/AmazeUI-2.4.2/assets/js/amazeui.js"></script>			
 	</head>
 
 	<body>
@@ -85,7 +85,7 @@
 
 							<div class="filePic">
 								<input type="file" class="inputPic" allowexts="gif,jpeg,jpg,png,bmp" accept="image/*">
-								<img class="am-circle am-img-thumbnail" src="../images/getAvatar.do.jpg" alt="" />
+								<img class="am-circle am-img-thumbnail" src="${pageContext.request.contextPath}/public/two/images/getAvatar.do.jpg" alt="" />
 							</div>
 
 							<p class="am-form-help">头像</p>
