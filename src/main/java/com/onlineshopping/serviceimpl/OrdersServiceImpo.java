@@ -35,6 +35,7 @@ public class OrdersServiceImpo implements OrdersService{
 		Orders orders2=ordersMappers.selectOrdersID(orders);
 		System.out.println(orders2);
 		orderDetailService.insertOrderDetail(orders2, goods);
+		//111
 	}
 	
 
