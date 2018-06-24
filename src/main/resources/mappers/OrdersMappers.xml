@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.2//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.onlineshopping.dao.OrdersMappers">
+         <insert id="insertOrders" parameterType="com.onlineshopping.po.Orders">
+              INSERT into orders (uID,oTime,oTotal) values (
+               #{uID.uID},#{oTime},#{goods.gdPrice})
+         </insert>
+         
+         <select id="selectOrdersID" parameterType="com.onlineshopping.po.Orders" resultType="com.onlineshopping.po.Orders">
+             select oID from orders where oTime = #{oTime} and uID = #{uID.uID}
+         </select>
+  </mapper>
