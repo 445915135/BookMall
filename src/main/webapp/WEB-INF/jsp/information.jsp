@@ -222,23 +222,23 @@
 					<li class="person">
 						<p><i class="am-icon-newspaper-o"></i>个人资料</p>
 						<ul>
-							<li> <a href="information.html">个人信息</a></li>
-							<li> <a href="safety.html">安全设置</a></li>
-							<li> <a href="address.html">地址管理</a></li>
+							<li> <a href="${pageContext.request.contextPath}/information">个人信息</a></li>
+							<li> <a href="${pageContext.request.contextPath}/safety">安全设置</a></li>
+							<li> <a href="${pageContext.request.contextPath}/address">地址管理</a></li>
 						</ul>
 					</li>
 					<li class="person">
 						<p><i class="am-icon-balance-scale"></i>我的交易</p>
 						<ul>
-							<li><a href="order.html">订单管理</a></li>
-							<li> <a href="comment.html">评价商品</a></li>
+							<li><a href="${pageContext.request.contextPath}/order">订单管理</a></li>
+							<li> <a href="${pageContext.request.contextPath}/comment">评价商品</a></li>
 						</ul>
 					</li>
 					
 					<li class="person">
 						<p><i class="am-icon-tags"></i>我的收藏</p>
 						<ul>
-							<li> <a href="collection.html">收藏</a></li>
+							<li> <a href="${pageContext.request.contextPath}/collection">收藏</a></li>
 						</ul>
 					</li>
 

@@ -32,17 +32,5 @@ public class UserServiceImpl implements UserService{
 					boolean bool=userMapper.addRegisterInfo(user);
 					return bool;
 				}
-				//查询全部商品
-				public List<Goods> commodityInformation(int li){
-					li=(li-1)*8;
-					List<Goods> list=userMapper.commodityInformation(li);
-					return list;
-				}
-				//查询看有多少页
-				public List<UserNum> getGoodsNum(){
-					int num=userMapper.getGoodsNum();
-					PagingUtil util=new PagingUtil();
-					List<UserNum>listNum=util.getNum(num, 8);
-					return listNum;
-				}
+
 }

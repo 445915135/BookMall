@@ -22,7 +22,7 @@
       </insert>
       <!-- 分页查询商品 -->
       <select id="commodityInformation"  parameterType="int" resultType="goods">
-      		select * from goods limit #{li},8
+      		select * from goods order by gdSaleQty desc limit #{li},8
 	  </select>
       <!-- 返回你有多少页 -->
 	  <select id="getGoodsNum"  resultType="int">

@@ -7,8 +7,7 @@ import com.onlineshopping.po.User;
 import com.onlineshopping.po.UserNum;
 
 public interface UserService {
-	public User userLogin(User user);
+	public User userLogin(User user);					//登入
 	public boolean addRegisterInfo(User user) throws Exception;		//增加注册信息
-	public List<Goods> commodityInformation(int li);					//分页查询商品
-	public List<UserNum> getGoodsNum();
+	
 }

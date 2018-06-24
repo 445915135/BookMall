@@ -17,7 +17,7 @@ public class InformationController {
 	@Autowired
 	ProductionService productionService;
 	@RequestMapping(value="information")
-	public String pay(HttpServletRequest request){
+	public String information(HttpServletRequest request){
 		
 		return "information";
 	}

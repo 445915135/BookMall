@@ -24,6 +24,7 @@ public class UserController {
 	UserService userService;
 	@ResponseBody
    @RequestMapping(value ="userlogin")
+	/*登入*/
    public String login (HttpServletRequest request,User user){
 		String aa=MD.MD5(user.getuPwd());
 		user.setuPwd(aa);
@@ -36,6 +37,7 @@ public class UserController {
    }
 	@RequestMapping(value ="addRegisterInfo")
 	   @ResponseBody
+	   /* 登入检验*/
 	   public boolean addRegisterInfo (@RequestBody User user){
 		   boolean bool=false;
 		   System.out.println(user.uPpwd);
@@ -49,18 +51,5 @@ public class UserController {
 		   }
 		   	   return bool;
 	   	   }
-	   //显示商品信息
-	   @RequestMapping(value ="commodityInformation")
-	   public String displayCommodity(HttpServletRequest request,Integer li){
-		   List<UserNum> listNum=userService.getGoodsNum();			/*查询有多少页*/
-		   request.setAttribute("listNum",listNum);					/*listnum一共有多少页，为现在为2页，传给jsp页面*/			
-		   if(li==null&&li==0){
-			   li=1;
-		   }
-		   request.setAttribute("li", li);							/*li为多少页如果第一次进入为空*/
-		   List<Goods> list=userService.commodityInformation(li);	/*分页查询*/
-		   System.out.println(list);
-		   request.setAttribute("list", list);						/*list为商品，传给前端*/
-		   return "home";   
-	   }
+	   
 }

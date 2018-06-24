@@ -7,6 +7,5 @@ import com.onlineshopping.po.OrderDetail;
 
 public interface ProductionMapper {
 	public Goods findGoodsById(int gdID);
-
 	public List<OrderDetail> score(int gdID);
 }
