@@ -15,11 +15,17 @@ public class Goods {
 	Date gdAddTime;
 	int gdHot;
 	String gdImage;
+	String gdAuthir;
+	String gdPress;
+	int gdIsbn;
+	String gdDescribe;
 	@Override
 	public String toString() {
 		return "Goods [gdID=" + gdID + ", tID=" + tID + ", gdCode=" + gdCode + ", gdName=" + gdName + ", gdPrice="
 				+ gdPrice + ", gdQuantity=" + gdQuantity + ", gdSaleQty=" + gdSaleQty + ", gdCity=" + gdCity
-				+ ", gdInfo=" + gdInfo + ", gdAddTime=" + gdAddTime + ", gdHot=" + gdHot + ", gdImage=" + gdImage + "]";
+				+ ", gdInfo=" + gdInfo + ", gdAddTime=" + gdAddTime + ", gdHot=" + gdHot + ", gdImage=" + gdImage
+				+ ", gdAuthir=" + gdAuthir + ", gdPress=" + gdPress + ", gdIsbn=" + gdIsbn + ", gdDescribe="
+				+ gdDescribe + "]";
 	}
 	public int getGdID() {
 		return gdID;
@@ -93,4 +99,29 @@ public class Goods {
 	public void setGdImage(String gdImage) {
 		this.gdImage = gdImage;
 	}
+	public String getGdAuthir() {
+		return gdAuthir;
+	}
+	public void setGdAuthir(String gdAuthir) {
+		this.gdAuthir = gdAuthir;
+	}
+	public String getGdPress() {
+		return gdPress;
+	}
+	public void setGdPress(String gdPress) {
+		this.gdPress = gdPress;
+	}
+	public int getGdIsbn() {
+		return gdIsbn;
+	}
+	public void setGdIsbn(int gdIsbn) {
+		this.gdIsbn = gdIsbn;
+	}
+	public String getGdDescribe() {
+		return gdDescribe;
+	}
+	public void setGdDescribe(String gdDescribe) {
+		this.gdDescribe = gdDescribe;
+	}
+	
 }
