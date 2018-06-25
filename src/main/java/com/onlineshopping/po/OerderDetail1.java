@@ -3,7 +3,7 @@ package com.onlineshopping.po;
 import java.util.Date;
 
 public class OerderDetail1 {
-	 int odID;
+	int odID;
     int odNum;
     String odEvalution;
     String odTime;
