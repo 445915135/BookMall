@@ -33,6 +33,7 @@ public class OrderController {
 		return "order";
 	}
 	
+	//订单
 	@RequestMapping(value="order1")
 	public String intddd(HttpServletRequest request){
 		List<OerderDetail1> oerderDetail1s=order.selectOrderDetailq();
