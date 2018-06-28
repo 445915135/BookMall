@@ -3,8 +3,29 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.2//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   <mapper namespace="com.onlineshopping.dao.OrderDetailMapper">
+  
+         <resultMap type="com.onlineshopping.po.OerderDetail1" id="selectOerderDetail1Map">
+          <id column="odID" property="odID"/>
+           <result column="odNum" property="odNum"/>
+           <result column="jiage" property="jiage"/>
+           <association property="goods" column="gdID" javaType="com.onlineshopping.po.Goods">
+                         <id column="gdID" property="gdID"/>
+                         <result column="gdName" property="gdName"/>
+                         <result column="gdPrice" property="gdPrice"/>
+                </association>
+         </resultMap>
          <insert id="insertOrderDetail" parameterType="com.onlineshopping.po.OerderDetail1">
                 INSERT into orderdetail (oID,gdID,odEvalution,odTime) values (
                #{orders.oID},#{goods.gdID},#{goods.gdInfo},#{odTime})
          </insert>
+         
+         <select id="selectOerderDetail" parameterType="com.onlineshopping.po.OerderDetail1" resultType="com.onlineshopping.po.OerderDetail1">
+               select * from orderdetail where oID = #{orders.oID} and gdID = #{goods.gdID}
+         </select>
+         
+         <select id="selectOerderDetail1q" resultMap="selectOerderDetail1Map">
+                select orderdetail.*,goods.gdName,(orderdetail.odNum*goods.gdPrice)
+	        as jiage,goods.gdPrice from goods,orderdetail,orders,users
+	        where orderdetail.gdID = goods.gdID and orderdetail.oID = orders.oID and orders.uID =users.uID and users.uID=#{user.uID}
+         </select>
   </mapper>

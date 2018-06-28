@@ -3,16 +3,18 @@ package com.onlineshopping.po;
 import java.util.Date;
 
 public class OerderDetail1 {
-	int odID;
+	Integer odID;
     int odNum;
     String odEvalution;
     String odTime;
     Orders orders;
     Goods goods;
-	public int getOdID() {
+    int jiage;
+    User user;
+	public Integer getOdID() {
 		return odID;
 	}
-	public void setOdID(int odID) {
+	public void setOdID(Integer odID) {
 		this.odID = odID;
 	}
 	public int getOdNum() {
@@ -46,6 +48,19 @@ public class OerderDetail1 {
 		this.goods = goods;
 	}
 	
+	public int getJiage() {
+		return jiage;
+	}
+	public void setJiage(int jiage) {
+		this.jiage = jiage;
+	}
+	
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
+	}
 	@Override
 	public String toString() {
 		return "OrderDetail [odID=" + odID + ", odNum=" + odNum

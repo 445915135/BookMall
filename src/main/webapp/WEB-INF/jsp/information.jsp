@@ -230,7 +230,7 @@
 					<li class="person">
 						<p><i class="am-icon-balance-scale"></i>我的交易</p>
 						<ul>
-							<li><a href="${pageContext.request.contextPath}/order">订单管理</a></li>
+							<li><a href="${pageContext.request.contextPath}/order1">订单管理</a></li>
 							<li> <a href="${pageContext.request.contextPath}/comment">评价商品</a></li>
 						</ul>
 					</li>
